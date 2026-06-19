@@ -102,6 +102,7 @@ Get smart. Secondary research to become "**cocktail-party conversational**" in t
    - Too broad: can't find experts ("food"). Too narrow: you've already decided.
 3. **Building a primer** — 5–10 pages, vocabulary, players, dynamics, change forces, open questions. Not a deliverable — a process.
 4. **AI as research partner** — accelerator, not substitute. The test: can you defend the synthesis without referring back to what the AI generated?
+5. **Mining public demand signals** — reviews, forums, code repos, search, freelance markets. A systematic way to surface candidate pains across a space. See [`demand_signal_mining.md`](demand_signal_mining.md). Discipline: a mined signal is a *lead to go ask about*, never validation — it ranks people to interview, it does not replace the interview.
 
 **Outputs:** focus area + market hypothesis, industry primer, ecosystem map, initial outreach list, preliminary questions.
 

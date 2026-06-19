@@ -45,6 +45,7 @@ Get smart. Read everything. Map the space.
 
 - **Pick a haystack** that's narrow enough to find experts in but broad enough to be surprised by. *"Indoor agriculture"* is a haystack; *"food"* is not.
 - **Build an industry primer** — 5–10 pages: market dynamics, players, change vectors, vocabulary, open questions. (See [`templates/industry_primer.md`](../templates/industry_primer.md) and [`playbooks/build_industry_primer.md`](../playbooks/build_industry_primer.md).)
+- **Mine public demand signals** — reviews, forums, code repos, search, freelance markets — to surface *candidate* pains worth taking into conversations. (See [`frameworks/demand_signal_mining.md`](../frameworks/demand_signal_mining.md).) A signal is a lead, not validation: it tells you who to call, never that the pain is real. Reading a rising search trend as proof is the "searching for validation instead of forming an insight" trap below.
 - **Map the ecosystem.** Who's up the value chain. Who's down. Who's adjacent. Who's regulator, who's customer, who's union, who's standards body.
 - **Use AI as a research partner**, not a substitute. The test: can you defend the synthesis without referring back to what the AI told you? If no, you haven't learned it.
 
@@ -108,6 +109,7 @@ When you can answer yes: proceed to [Stage 01 — Insight & idea selection](01_i
 - [`frameworks/the_mom_test.md`](../frameworks/the_mom_test.md) — How to talk to people without poisoning the data
 - [`playbooks/run_outreach.md`](../playbooks/run_outreach.md) — Outreach mechanics (cold email, sourcing, pipeline)
 - [`playbooks/build_industry_primer.md`](../playbooks/build_industry_primer.md) — How to ramp on a space
+- [`frameworks/demand_signal_mining.md`](../frameworks/demand_signal_mining.md) — Mining public sources for candidate pains (leads, not validation)
 - [`playbooks/synthesis.md`](../playbooks/synthesis.md) — Pile Building, Cluster Analysis, hypothesis tracking
 - [`templates/opportunity_rubric.md`](../templates/opportunity_rubric.md) — Your filter
 

@@ -148,7 +148,7 @@ entrepreneurship-lessons/
 │   ├── 05_mvp_build.md
 │   ├── 06_pmf_measurement.md
 │   └── 07_pivot_or_persevere.md
-├── frameworks/          (21 reference docs)
+├── frameworks/          (22 reference docs)
 │   ├── pmf.md           ← the spine
 │   ├── judgment_and_pareto.md   (deciding under uncertainty; 80/20)
 │   ├── lean_startup.md
@@ -169,6 +169,7 @@ entrepreneurship-lessons/
 │   ├── unit_economics.md
 │   ├── design_sprint.md
 │   ├── design_partners.md
+│   ├── demand_signal_mining.md  (public-source signal mining; leads, not validation)
 │   └── ai_lifecycle.md
 ├── playbooks/           (12 operational how-tos)
 │   ├── customer_interview.md

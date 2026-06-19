@@ -1,7 +1,7 @@
 version: 1
 counts:
   stages: 8
-  frameworks: 21
+  frameworks: 22
   playbooks: 12
   rubrics: 1
   templates: 14
@@ -111,6 +111,12 @@ artifacts:
   title: Customer Development (Steve Blank)
   purpose: Blank's founder-run discipline of getting out of the building to validate a desperate customer
     before building.
+- id: framework-demand-signal-mining
+  kind: framework
+  path: frameworks/demand_signal_mining.md
+  title: Demand Signal Mining
+  purpose: Use public sources (reviews, forums, code repos, search, freelance markets) to generate candidate-pain
+    hypotheses upstream of customer discovery — leads to go ask about, never validation.
 - id: framework-design-partners
   kind: framework
   path: frameworks/design_partners.md
