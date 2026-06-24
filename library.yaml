@@ -2,10 +2,10 @@ version: 1
 counts:
   stages: 8
   frameworks: 22
-  playbooks: 12
+  playbooks: 13
   rubrics: 1
   templates: 14
-  skills: 25
+  skills: 26
   careers: 1
 artifacts:
 - id: stage-00-prepared-mind
@@ -243,6 +243,12 @@ artifacts:
   title: Verification-First Diligence
   purpose: Pressure-test a claim set before a decision rides on it — verify / flag / discard with sources,
     what-must-be-true, gaps, then the bear case.
+- id: playbook-first-customers
+  kind: playbook
+  path: playbooks/first_customers.md
+  title: Getting Your First 10 Customers
+  purpose: 'The tactics of founder-led early sales: start from the buyer''s actual day; work the warm-network
+    -> unscalable -> tools ladder; give before asking; one clear ask.'
 - id: playbook-mvp-scoping
   kind: playbook
   path: playbooks/mvp_scoping.md
@@ -419,6 +425,13 @@ artifacts:
   purpose: Identify, qualify, sign, and manage design partners while pushing back on tire-kickers and
     free-pilot traps.
   command: /ent-design-partners
+- id: ent-first-customers
+  kind: skill
+  path: .claude/skills/ent-first-customers/SKILL.md
+  title: First Customers Coach
+  purpose: Coach the tactics of landing the first ~10 paying customers via founder-led sales, placed on
+    the warm-network/unscalable/tools ladder.
+  command: /ent-first-customers
 - id: ent-idea-coach
   kind: skill
   path: .claude/skills/ent-idea-coach/SKILL.md

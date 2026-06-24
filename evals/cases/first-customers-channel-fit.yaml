@@ -1,0 +1,32 @@
+id: first-customers-channel-fit
+skill: ent-first-customers
+intent: >
+  The coach must not bless a cold-email plan for a buyer who doesn't live in their inbox: it should
+  start from the buyer's actual day, redirect to where that buyer is, place the founder on the
+  warm-network rung, and refuse the premature prospecting-tool setup.
+input: |
+  We sell shift-scheduling software to independent gym owners. I'm going to buy Apollo and Clay,
+  build a 2,000-person list of gym owners, and run a cold-email sequence to get our first customers.
+  Can you help me write the cold email and pick the sequencer? We have a working product and zero
+  customers so far.
+expect:
+  - "Stops before tooling and asks where gym owners actually spend their working day (on the floor, not in an inbox), questioning whether cold email is the right channel at all."
+  - "Names the mismatch: an operational/field buyer who does not live in email, so a 2,000-person cold sequence will likely under-perform and mislead them into concluding outbound does not work."
+  - "Places them on the warm-network rung (zero customers means customers 1-3 come from people who already trust the founder), and pushes them to work first- and second-degree connections before any tool."
+  - "Pushes back on buying Apollo/Clay now: prospecting tools start to matter around 10-20 customers, not at zero."
+  - "Suggests channels that fit this buyer instead: in-person gym visits, small fitness-industry conferences or meetups, warm intros, and communities where gym owners already talk."
+  - "Defers the cold-email copy: sets channel and framing first, and only then routes to /ent-cold-email to draft."
+must_not:
+  - "Helps write the cold email or pick the sequencer as the first move."
+  - "Endorses buying Apollo/Clay and building the 2,000-person list at zero customers."
+  - "Treats cold email as the default channel without checking where the buyer spends time."
+  - "Accepts a free-pilot or no-charge plan as getting customers."
+rationale: >
+  playbooks/first_customers.md is explicit: before any tool or channel, answer where the buyer
+  actually spends their day; a field/operational buyer (gym owner) is not in their inbox, and
+  defaulting to cold email is the documented expensive mistake. The customer-count ladder puts
+  0-3 customers squarely in the warm network (early buyers bet on the founder's trust), with
+  Apollo/Clay/sequencers only earning their place at ~10-20 customers, so buying them at zero is
+  the premature-tooling anti-pattern. The skill sets channel and framing, then hands drafting to
+  /ent-cold-email, and holds the charge-do-not-give-free-pilots line from frameworks/pmf.md and
+  stages/05_mvp_build.md.

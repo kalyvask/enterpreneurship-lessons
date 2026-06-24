@@ -180,6 +180,11 @@ Three illustrative non-email approaches from past RDI teams:
 
 Common thread: **reduce friction, demonstrate genuine interest, meet people where they already are.**
 
+> **Research outreach vs. sales outreach.** This playbook is about getting *interviews* — reaching
+> the seven stakeholder categories to learn. Getting your first *paying customers* is a different
+> motion (start from where the buyer spends their day; work the warm-network → unscalable → tools
+> ladder). See [`first_customers.md`](first_customers.md) and `/ent-first-customers`.
+
 ## Sharing back — the multiplier
 
 The single most underleveraged activity:

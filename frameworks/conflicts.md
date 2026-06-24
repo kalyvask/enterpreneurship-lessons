@@ -35,6 +35,7 @@ If a framework's advice survives those four, follow it. If it doesn't, it loses 
 | 9 | The PMF number | Sean Ellis 40% "very disappointed" (consumer-origin) | B2B reads PMF via retention/expansion/references | **Weight by your motion** | The dogs eating the dog food looks different in enterprise; don't worship one number. |
 | 10 | How fast PMF should appear | Existing-market reflex: fast pull, or it isn't working | New market: latent demand, adoption is slow then sudden | **Read the signal by market type; never lower the desperation bar** | A new market's clock is longer; expecting existing-market speed death-pivots a working bet. See `market_type.md`. |
 | 11 | Data scan vs. customer conversation | Scan public sources, score the demand, ship the blueprint | Get out of the building; desperation only shows in behaviour | **Scan to find who to ask; conversation to validate — never skip B** | A scan surfaces stated interest at scale, never desperation. It generates hypotheses; it cannot confirm one. See `demand_signal_mining.md`. |
+| 12 | First customers: warm-network trust vs. proven desperation | First 1–3 buy because they trust *you*, the founder | The PMF bar is a *desperate* customer, not a friendly one | **Use the trust to get in the room; still verify the desperation** | Warm-network sales are how you start (`first_customers.md`), but a favour-buy isn't PMF evidence. Don't read "my ex-colleague signed" as the *who* being desperate. |
 
 ## The ones worth expanding
 

@@ -3,7 +3,7 @@
 This directory holds an evaluation suite for the Claude Code skills in this repo
 (`ent-stage-router`, `ent-pmf-evaluator`, `ent-unit-econ-check`, `ent-office-hours`,
 `ent-concept-test`, `ent-mvp-scoper`, `ent-red-team`, `ent-intake`, `ent-pivot-coach`,
-`ent-thesis`, `ent-career-coach`, `ent-diligence`).
+`ent-thesis`, `ent-career-coach`, `ent-diligence`, `ent-first-customers`).
 
 ## What these evals are
 
@@ -93,7 +93,7 @@ CI: `.github/workflows/evals.yml` runs it on demand (Actions tab) and weekly, wi
 
 ## Coverage
 
-Thirteen fixtures, with positive and negative cases:
+Fourteen fixtures, with positive and negative cases:
 
 | # | id | skill | tests |
 |---|----|-------|-------|
@@ -110,6 +110,7 @@ Thirteen fixtures, with positive and negative cases:
 | 11 | `thesis-rejects-anecdote` | `ent-thesis` | rule of three: n=1 stays a candidate; the log is append-only; no rewriting history |
 | 12 | `career-coach-stays-off-spine` | `ent-career-coach` | coaches trajectory over title; routes venture validation back to the spine; never touches the workspace |
 | 13 | `diligence-flags-unverified` | `ent-diligence` | refuses the rubber stamp; flags unsourced claims; decomposes vague numbers; routes the bear case to red-team |
+| 14 | `first-customers-channel-fit` | `ent-first-customers` | checks the buyer's day before the channel; redirects email-default for a field buyer; warm-network rung; no premature tools |
 
 Cases 3 and 4 are a matched negative/positive pair on the same skill, so a passing skill must
 swing the verdict on the numbers alone.

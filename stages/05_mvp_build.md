@@ -193,9 +193,11 @@ The handoff: this repo gets you to a scoped MVP that tests your leap of faith; a
 - [`frameworks/design_partners.md`](../frameworks/design_partners.md) — for B2B: the 2–5 design partners are your MVP customers
 - [`playbooks/validation_sequence.md`](../playbooks/validation_sequence.md) — concept → implementation → MVP
 - [`playbooks/mvp_scoping.md`](../playbooks/mvp_scoping.md) — how to decide what's in v1
+- [`playbooks/first_customers.md`](../playbooks/first_customers.md) — the tactics of getting your first ~10 paying customers
 
 ## Agent partner
 
 - `/ent-mvp-scoper` — given your value hypothesis and leap of faith, helps decide the smallest possible MVP that tests the leap of faith. Pushes back on overbuilding.
+- `/ent-first-customers` — the tactics of landing your first ~10 paying customers: start from the buyer's actual day, work the warm-network → unscalable → tools ladder.
 - `/ent-design-partners` — for B2B: identify, qualify, and manage the 2–5 design partners who co-create the MVP.
 - `/ent-mvp-review` — walks you through a two-week product review: what was built, what was learned, what's next.
