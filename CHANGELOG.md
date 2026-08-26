@@ -5,6 +5,31 @@ version in `.claude-plugin/plugin.json` tracks these releases.
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-08-26
+
+### Added
+
+- **Demand Signal Mining** framework — public-source pain hypotheses, upstream of discovery.
+- **First customers**: `playbooks/first_customers.md` + `/ent-first-customers` — founder-led early
+  sales (warm network → unscalable → tools), distinct from research interviews.
+
+### Changed
+
+- **Marketplace packaging brought to parity with `winning-writing`.** The marketplace is now named
+  after the plugin, so installing is `/plugin marketplace add kalyvask/entrepreneurship-lessons`
+  then `/plugin install entrepreneurship-lessons` (was `…@kalyvask`). The marketplace entry carries
+  the fields the plugin browser actually renders — `displayName`, a full `description`, `version`,
+  `author`, `homepage`, `repository`, `license`, `keywords`, `category` — instead of a bare
+  name/source/description.
+- Both plugin manifests corrected from 25 to 26 skills and given the rest of the library's counts.
+
+### Fixed
+
+- `tools/manifest.py check` now also gates the plugin manifests: `plugin.json` and
+  `marketplace.json` must agree on `version`, the `skills` path must resolve, and any "N stages /
+  frameworks / playbooks / templates / coaching skills" claim in either description must match
+  `library.yaml`. This is the drift that let the marketplace card advertise 25 skills.
+
 ## [0.1.0] — 2026-06-01
 
 First versioned release: the library productized into a stateful journey engine.

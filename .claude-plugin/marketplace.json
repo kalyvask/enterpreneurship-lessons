@@ -1,14 +1,33 @@
 {
-  "name": "kalyvask",
+  "name": "entrepreneurship-lessons",
   "metadata": {
-    "description": "Plugins by Alexandros Kalyvas — entrepreneurship-lessons: the curious-mind-to-PMF journey engine with 25 coaching skills."
+    "description": "The curious-mind-to-PMF journey engine: staged frameworks, playbooks, evidence-gated rubrics, a stateful venture workspace, and 26 coaching skills that push back when you're kidding yourself."
   },
-  "owner": { "name": "Alexandros Kalyvas" },
+  "owner": {
+    "name": "Alexandros Kalyvas"
+  },
   "plugins": [
     {
       "name": "entrepreneurship-lessons",
       "source": "./",
-      "description": "Curious mind → product-market fit: the staged journey, evidence-gated rubrics, a stateful venture workspace, and 25 coaching skills (intake, stage router, PMF evaluator, pivot coach, red team, diligence, thesis ledger, and more)."
+      "displayName": "Entrepreneurship Lessons",
+      "description": "Curious mind to product-market fit: 8 stages, 22 frameworks, 13 playbooks, 14 templates, evidence-gated rubrics, a stateful venture workspace the agent maintains for you, and 26 coaching skills (intake, office hours, stage router, RDI coach, interview prep/debrief, synthesis, value hypothesis, MVP scoper, PMF evaluator, pivot coach, red team, diligence, thesis ledger).",
+      "version": "0.2.0",
+      "author": {
+        "name": "Alexandros Kalyvas"
+      },
+      "homepage": "https://github.com/kalyvask/entrepreneurship-lessons",
+      "repository": "https://github.com/kalyvask/entrepreneurship-lessons",
+      "license": "MIT",
+      "keywords": [
+        "entrepreneurship",
+        "product-market-fit",
+        "startup",
+        "customer-discovery",
+        "founder",
+        "coaching"
+      ],
+      "category": "productivity"
     }
   ]
 }

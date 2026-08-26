@@ -61,11 +61,12 @@ cd entrepreneurship-lessons
 claude   # skills auto-load from .claude/skills/, and every framework/playbook/template reference resolves
 ```
 
-To make the coaching skills available from anywhere, install the repo as a plugin:
+To make the coaching skills available from anywhere, install the repo as a plugin — two commands,
+no clone:
 
 ```
 /plugin marketplace add kalyvask/entrepreneurship-lessons
-/plugin install entrepreneurship-lessons@kalyvask
+/plugin install entrepreneurship-lessons
 ```
 
 The skills then appear as `/entrepreneurship-lessons:ent-…`. The supporting frameworks, playbooks, and templates ship with the plugin: each skill carries a note to resolve its repo-relative file references under the plugin root (`CLAUDE_PLUGIN_ROOT`) when installed that way, so both the in-repo and plugin paths work.
