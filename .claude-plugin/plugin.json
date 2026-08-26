@@ -1,12 +1,21 @@
 {
   "name": "entrepreneurship-lessons",
   "displayName": "Entrepreneurship Lessons",
-  "description": "A staged journey from a curious mind to product-market fit: frameworks, playbooks, rubrics, templates, a stateful venture workspace, and 25 coaching skills built on the PMF framework.",
-  "version": "0.1.0",
-  "author": { "name": "Alexandros Kalyvas" },
+  "description": "Curious mind to product-market fit: 8 stages, 22 frameworks, 13 playbooks, 14 templates, evidence-gated rubrics, a stateful venture workspace the agent maintains for you, and 26 coaching skills built on the Rachleff/Unusual PMF framework.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Alexandros Kalyvas"
+  },
   "homepage": "https://github.com/kalyvask/entrepreneurship-lessons",
   "repository": "https://github.com/kalyvask/entrepreneurship-lessons",
   "license": "MIT",
-  "keywords": ["entrepreneurship", "product-market-fit", "startup", "coaching", "skills"],
+  "keywords": [
+    "entrepreneurship",
+    "product-market-fit",
+    "startup",
+    "customer-discovery",
+    "founder",
+    "coaching"
+  ],
   "skills": "./.claude/skills/"
 }

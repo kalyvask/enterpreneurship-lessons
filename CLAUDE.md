@@ -63,7 +63,12 @@ names the conflict and which side to follow. The tie-breaker is always: **the PM
   files ship with the plugin and resolve under the plugin root (`CLAUDE_PLUGIN_ROOT`).
 - Plugin packaging: `.claude-plugin/plugin.json` maps `skills` to `./.claude/skills/` (one source
   of truth for both the clone-and-run and plugin paths), and `.claude-plugin/marketplace.json`
-  makes the repo installable via `/plugin marketplace add kalyvask/entrepreneurship-lessons`.
+  makes the repo installable via `/plugin marketplace add kalyvask/entrepreneurship-lessons`
+  then `/plugin install entrepreneurship-lessons`. The marketplace entry carries its own
+  `displayName`/`description`/`keywords`/`category` (that is what the plugin browser renders),
+  and its `version` must match `plugin.json`; `python tools/manifest.py check` asserts both,
+  plus the skill count quoted in either description. `claude plugin validate . --strict` must
+  stay clean.
   Releases are tagged and logged in `CHANGELOG.md`; bump the plugin `version` with each release.
 
 ## Workspace and the worked example

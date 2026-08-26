@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Validate library.yaml against the filesystem and the README counts.
+"""Validate library.yaml against the filesystem, the README, and the plugin manifests.
 
 library.yaml is the single source of truth for what the library contains. This
 check is what prevents drift (e.g. the README claiming 10 playbooks when there
-are 11).
+are 11, or the marketplace card advertising 25 skills when 26 ship).
 
 Usage:
   python tools/manifest.py check       # CI gate: every path exists, counts agree
   python tools/manifest.py counts      # print counts by kind
 """
+import json
 import os
 import re
 import sys
@@ -21,6 +22,8 @@ except ImportError:  # pragma: no cover
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFEST = os.path.join(ROOT, "library.yaml")
 README = os.path.join(ROOT, "README.md")
+PLUGIN = os.path.join(ROOT, ".claude-plugin", "plugin.json")
+MARKETPLACE = os.path.join(ROOT, ".claude-plugin", "marketplace.json")
 
 # kind -> (directory, is the artifact a folder?)
 KIND_DIRS = {
@@ -52,6 +55,48 @@ def counts_by_kind(data):
     for a in data.get("artifacts", []):
         counts[a.get("kind")] = counts.get(a.get("kind"), 0) + 1
     return counts
+
+
+def check_plugin(counts):
+    """The marketplace card is the repo's shop window; it must not advertise stale numbers.
+
+    Asserts the two manifests agree with each other and with the library: same version,
+    the skills path resolves, and any "<N> <kind>s" claim in either description is true.
+    """
+    errors = []
+    try:
+        plugin = json.load(open(PLUGIN, encoding="utf-8"))
+        market = json.load(open(MARKETPLACE, encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        return [f".claude-plugin: {e}"]
+
+    entries = [p for p in market.get("plugins", []) if p.get("name") == plugin.get("name")]
+    if not entries:
+        return [f"marketplace.json lists no plugin named {plugin.get('name')!r}"]
+    entry = entries[0]
+
+    if entry.get("version") != plugin.get("version"):
+        errors.append(
+            f"version drift: plugin.json={plugin.get('version')!r} "
+            f"but marketplace.json={entry.get('version')!r}"
+        )
+
+    skills_path = plugin.get("skills") or ""
+    if skills_path and not os.path.isdir(os.path.normpath(os.path.join(ROOT, skills_path))):
+        errors.append(f"plugin.json skills path does not exist: {plugin.get('skills')}")
+
+    # every "<N> <kind>s" claim in a user-facing description must match the manifest
+    where = {
+        "plugin.json description": plugin.get("description", ""),
+        "marketplace.json metadata.description": market.get("metadata", {}).get("description", ""),
+        "marketplace.json plugin description": entry.get("description", ""),
+    }
+    kinds = {k + "s": v for k, v in counts.items()}
+    for label, text in where.items():
+        for n, word in re.findall(r"(\d+)\s+(?:coaching\s+)?([a-z]+)", text):
+            if word in kinds and int(n) != kinds[word]:
+                errors.append(f"{label} claims {n} {word} but manifest has {kinds[word]}")
+    return errors
 
 
 def check():
@@ -105,6 +150,8 @@ def check():
                 errors.append(
                     f"README claims {m.group(1)} {kind}s but manifest has {counts.get(kind, 0)}"
                 )
+
+    errors += check_plugin(counts)
 
     if errors:
         print("MANIFEST CHECK FAILED:")
