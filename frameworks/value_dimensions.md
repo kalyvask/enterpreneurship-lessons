@@ -69,6 +69,30 @@ A related distinction, sometimes called the must-have test:
 
 The connection to desperation: a desperate customer (see [`frameworks/pmf.md`](pmf.md)) is, by definition, looking for a painkiller. If your product is a vitamin to everyone you talk to, you don't have a desperate customer, and you don't have PMF coming.
 
+## Value is only half the lever — the other half is friction
+
+Everything above is about the *numerator*. But whether someone actually adopts is a ratio:
+
+> **Likelihood of adoption ≈ perceived value / friction to get it.**
+
+Friction is everything the customer must spend to reach the value — not the price you charge, but the total cost of *getting there*: money, time, effort, learning curve, risk, and the pain of leaving what they use today. Two products with identical value get adopted at completely different rates if one is high-friction. This is why the equation matters pre-PMF: **you can win by lowering the denominator, not only by raising the numerator** — and lowering friction is often cheaper, faster, and more within your control than adding value.
+
+It is also the discipline's antidote to the "just add features" reflex. Adding features raises perceived value a little and almost always raises friction too (more to learn, more to set up, more to decide) — so it can *lower* the ratio. When adoption is stalling, the sharper first question is usually "what friction can I strip out?" not "what feature can I add?" (This is the same reason `frameworks/pmf.md` warns that adding features to non-desperate customers is lunacy: features move the numerator; desperation and low friction move adoption.)
+
+### The friction inventory
+
+For your narrow *who*, list what stands between them and the value, and attack the biggest:
+
+- **Money** — price, but also setup fees, the cost of things they must buy to use you.
+- **Time** — how long until first value? (Time-to-first-value is the friction metric that most predicts early retention.)
+- **Effort / learning** — onboarding steps, new mental model, data they must enter, integration work.
+- **Risk** — what happens to them if it fails? Reputational, financial, operational. Higher stakes = higher friction, which is why references and guarantees sell.
+- **Switching cost** — the friction of *leaving the incumbent*: migrating data, retraining a team, breaking existing workflows and integrations. This cuts both ways — it's the wall in front of a prospect on their current tool, and (once you win them) the moat that keeps them. Pre-PMF it is usually working *against* you; name it honestly rather than assuming a better product overcomes it. (See also `crossing_the_chasm.md` on pragmatists hating switching, and `jobs_to_be_done.md` on the anxieties of adopting a new solution.)
+
+### Concierge and "do it for them" as friction removal
+
+The reason concierge / done-for-you delivery (see `stages/05_mvp_build.md`, `playbooks/validation_sequence.md`) works so well pre-PMF is that it drives friction toward zero — you absorb the effort, the setup, the learning curve yourself. It lets you test whether the *value* is real before you've built the low-friction product. If people won't take it even when you remove all the friction, the problem is the value (or the *who*), not the friction — a clean diagnostic.
+
 ## Applying it
 
 For your current product, run this analysis:
@@ -78,6 +102,7 @@ For your current product, run this analysis:
 3. **Is there a P?** If not — what could it be? Who does this product make the user, socially and emotionally? If you genuinely can't find a P, you're at commoditization risk — plan to compete on price or rethink.
 4. **Painkiller or vitamin?** For your target *who* — is this solving a severe present pain, or improving something marginally? If vitamin — that's a desperation problem; revisit the *who*.
 5. **Segment the value.** Do different segments value this differently? If so, which segment derives the most psychological value? That's likely your sharpest *who*.
+6. **Run the friction inventory.** For that *who*, list the money / time / effort / risk / switching-cost between them and the value, and name the single biggest one. Ask "what would it take to halve this?" before asking "what feature could I add?"
 
 ## Common failure modes
 
@@ -89,6 +114,8 @@ For your current product, run this analysis:
 | Building a vitamin and treating it like a painkiller | Long sales cycles, low WTP, no desperation, no PMF |
 | Engineers pricing on cost-plus | Ignores the value-based and psychological premium you could capture |
 | Assuming your value is the customer's value | You think it's functional; they buy it for status — and you message it wrong |
+| Adding features when adoption stalls | Features raise friction too; the ratio can fall. Strip friction before adding value |
+| Ignoring switching cost | A better product still loses to the incumbent if leaving it is too painful; name the switching cost, don't wish it away |
 
 ## Where this lives in the journey
 
@@ -97,7 +124,9 @@ For your current product, run this analysis:
 - [Stage 04 — Value Hypothesis](../stages/04_value_hypothesis.md) — narrow the *who* to the highest-psychological-value segment
 - [`frameworks/jobs_to_be_done.md`](jobs_to_be_done.md) — the emotional/social dimensions of jobs
 - [`frameworks/value_prop_canvas.md`](value_prop_canvas.md) — mapping value to pains and gains
+- [Stage 05 — MVP Build](../stages/05_mvp_build.md) & [`playbooks/validation_sequence.md`](../playbooks/validation_sequence.md) — concierge / done-for-you as friction removal
+- [`frameworks/crossing_the_chasm.md`](crossing_the_chasm.md) — switching cost and pragmatist adoption
 
 ## Source
 
-The F/E/P framework and the "face product" / painkiller-vs-vitamin framing are standard product-strategy concepts, taught in product launch and marketing strategy curricula and grounded in value-based pricing literature. Related: Bain's "Elements of Value" pyramid extends this into 30 elements across four tiers.
+The F/E/P framework and the "face product" / painkiller-vs-vitamin framing are standard product-strategy concepts, taught in product launch and marketing strategy curricula and grounded in value-based pricing literature. Related: Bain's "Elements of Value" pyramid extends this into 30 elements across four tiers. The value/friction adoption ratio (perceived value over cost/time/effort to get it) is a standard product-adoption framing, synthesized here in the repo's own words.
